@@ -55,8 +55,8 @@ h1 {
 }
 
 .section-title {
-    background: linear-gradient(90deg, #007bff 100%);
-    color: #fff;
+    background: linear-gradient(90deg, #00eaff 100%);
+    color: #1a1a1a;
     padding: 7px 18px;
     font-size: 1.25em;
     margin-top: 36px;
@@ -137,33 +137,32 @@ footer {
     right: 0;
     padding: 18px 22px 0 0;
     z-index: 2;
+    color: #00eaff;
 }
 
 .lang-switch button {
-    background: none;
-    border: none;
-    padding: 0;
+    background: rgba(0, 234, 255, 0.05);
+    border: 1px solid rgba(0, 234, 255, 0.4);
+    padding: 8px 16px;
     cursor: pointer;
-    box-shadow: none;
+    box-shadow: 0 0 10px rgba(0, 234, 255, 0.1);
     outline: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: auto;
-    height: auto;
+    color: #00eaff;
+    font-family: inherit;
+    font-weight: 600;
+    font-size: 0.9em;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    backdrop-filter: blur(4px);
 }
 
-.lang-switch button img {
-    width: 5em;
-    height: 5em;
-    border-radius: 0;
-    box-shadow: none;
-    display: block;
-    transition: transform 0.2s;
-}
-
-.lang-switch button:hover img {
-    transform: scale(1.08);
+.lang-switch button:hover {
+    background: #00eaff;
+    color: #1a1a1a;
+    box-shadow: 0 0 20px rgba(0, 234, 255, 0.5);
+    transform: translateY(-2px);
 }
 
 .project-screenshots {

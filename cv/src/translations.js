@@ -39,7 +39,7 @@ export const translations = {
     <ul>
         <li>Full stack -kehitys</li>
         <li>Mobiilisovelluskehitys (Android & iOS)</li>
-        <li>Hallintapaneelit ja CMS-ratkaisut</li>
+        <li>Hallintapaneelien toteutus</li>
         <li>Testaus, käyttöönotto ja jatkokehitys</li>
         <li>Itsenäinen- ja projektityöskentely</li>
     </ul>
@@ -49,10 +49,10 @@ export const translations = {
       <p>Suomi: Äidinkieli</p>
       <p>Englanti: Erinomainen</p>
     `,
-    button: `<img src="src/assets/gb.png" alt="English" style="width:1.5em;height:1.5em;border-radius:50%;">`,
+    button: `English`,
     projectTitle: "Esittelyprojekti",
     projectDescription: `
-      <p>Kehitin mobiilisovelluksen kauppakeskukselle, jossa toteutin käyttöliittymän, toiminnallisuudet ja tietokantaintegraatiot. Projekti sisälsi testauksen ja käyttöönoton tuen sekä tiimityöskentelyä.</p>
+      <p>Kehitin mobiilisovelluksen kauppakeskukselle vastaten käyttöliittymästä, keskeisistä toiminnallisuuksista ja tietokantaintegraatioista. Teknologioina käytin React Nativea, JavaScriptiä, REST-rajapintoja ja SQL-tietokantaa. Projekti sisälsi testauksen ja tiimityöskentelyä.</p>
     `,
     projectOpenImages: "(Avaa kuvat klikkaamalla)."
   },
@@ -97,7 +97,7 @@ export const translations = {
     <ul>
         <li>Full stack development</li>
         <li>Mobile app development (Android & iOS)</li>
-        <li>Admin panels and CMS solutions</li>
+        <li>Admin panels</li>
         <li>Testing, deployment, and further development</li>
         <li>Independent and project work</li>
     </ul>
@@ -107,10 +107,10 @@ export const translations = {
       <p>Finnish: Native</p>
       <p>English: Excellent</p>
     `,
-    button: `<img src="src/assets/fi.png" alt="Suomi" style="width:1.5em;height:1.5em;border-radius:50%;">`,
+    button: `Finnish`,
     projectTitle: "Featured Project",
     projectDescription: `
-      <p>Developed a mobile application for a shopping center, implementing the UI, functionalities, and database integrations. The project included testing, deployment support, and teamwork.</p>
+      <p>Developed a mobile application for a shopping center, responsible for the user interface, core functionalities, and database integrations. Technologies used included React Native, JavaScript, REST APIs, and an SQL database. The project involved testing and teamwork.</p>
     `,
     projectOpenImages: "(Click to view the images)."
   }
