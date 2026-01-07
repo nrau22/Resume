@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Niko Rautio CV</title>
-  <script type="module" crossorigin src="/Resume/assets/index-cjLOzknL.js"></script>
-  <link rel="stylesheet" crossorigin href="/Resume/assets/index-nBpGV0vZ.css">
+  <script type="module" crossorigin src="/Resume/assets/index-bUaHFMdP.js"></script>
+  <link rel="stylesheet" crossorigin href="/Resume/assets/index-CLgKJVwX.css">
 </head>
+
 <body>
   <div class="container">
 
@@ -42,20 +44,19 @@
 
     <section>
       <div class="section-title" id="projectTitle"></div>
-      <div class="project-screenshots" id="projectScreenshots">
-        <a href="src/assets/screenshot1.png" target="_blank" rel="noopener">
-          <img src="/Resume/assets/screenshot1-BvL2_g7i.png" alt="Project Screenshot 1">
-        </a>
-        <a href="src/assets/screenshot2.png" target="_blank" rel="noopener">
-          <img src="/Resume/assets/screenshot2-x7jdv3mA.png" alt="Project Screenshot 2">
-        </a>
-        <a href="src/assets/screenshot3.png" target="_blank" rel="noopener">
-          <img src="/Resume/assets/screenshot3-Bu_whLIu.png" alt="Project Screenshot 3">
-        </a>
-      </div>
+
+      <div class="project-screenshots" id="projectScreenshots"></div>
+
       <div class="project-images-note" id="projectImagesNote"></div>
       <div class="content" id="projectDescription"></div>
     </section>
+
+    <!-- Image modal -->
+    <div id="imageModal" class="image-modal hidden">
+      <span id="modalClose">&times;</span>
+      <img id="modalImage" alt="Project screenshot full view" />
+    </div>
+
 
     <footer>
       <p>&copy; 2026 Niko Rautio</p>
@@ -64,4 +65,5 @@
   </div>
 
 </body>
+
 </html>
