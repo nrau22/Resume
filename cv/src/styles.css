@@ -210,3 +210,38 @@ footer {
         padding: 7px 6px 7px 6px;
     }
 }
+
+/* Screenshot hover */
+.screenshot-thumb {
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.screenshot-thumb:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 24px rgba(0, 234, 255, 0.35);
+}
+
+/* Modal */
+.image-modal {
+    inset: 0;
+    background: rgba(0, 0, 0, 0.85);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.image-modal.hidden {
+    display: none;
+}
+
+.image-modal img {
+    max-width: 92%;
+    max-height: 92%;
+    border-radius: 10px;
+    box-shadow: 0 0 40px rgba(0, 234, 255, 0.4);
+}
+#modalClose {
+    display: none;
+}

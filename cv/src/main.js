@@ -1,7 +1,10 @@
 import './styles.css'
-import javascriptLogo from './javascript.svg'
-import viteLogo from '/vite.svg'
 import { translations } from './translations'
+
+import screenshot1 from './assets/screenshot1.png'
+import screenshot2 from './assets/screenshot2.png'
+import screenshot3 from './assets/screenshot3.png'
+import screenshot4 from './assets/screenshot4.png'
 
 let currentLang = 'fi'
 
@@ -18,7 +21,33 @@ const elements = {
   button: document.getElementById('langBtn'),
   projectTitle: document.getElementById('projectTitle'),
   projectDescription: document.getElementById('projectDescription'),
-  projectImagesNote: document.getElementById('projectImagesNote')
+  projectImagesNote: document.getElementById('projectImagesNote'),
+  projectScreenshots: document.getElementById('projectScreenshots'),
+  modal: document.getElementById('imageModal'),
+  modalImg: document.getElementById('modalImage'),
+  modalClose: document.getElementById('modalClose')
+}
+
+const screenshots = [
+  { src: screenshot1, alt: 'Project Screenshot 1' },
+  { src: screenshot2, alt: 'Project Screenshot 2' },
+  { src: screenshot3, alt: 'Project Screenshot 3' },
+  { src: screenshot4, alt: 'Project Screenshot 4' }
+]
+
+function renderScreenshots() {
+  elements.projectScreenshots.innerHTML = screenshots
+    .map(
+      (shot) => `
+        <img 
+          src="${shot.src}" 
+          alt="${shot.alt}" 
+          class="screenshot-thumb"
+          loading="lazy"
+        />
+      `
+    )
+    .join('')
 }
 
 function render() {
@@ -32,10 +61,10 @@ function render() {
   elements.skills.innerHTML = t.skills
   elements.languagesTitle.textContent = t.languagesTitle
   elements.languages.innerHTML = t.languages
-  elements.button.innerHTML = t.button
-  elements.projectTitle.innerHTML = t.projectTitle
+  elements.button.textContent = t.button
+  elements.projectTitle.textContent = t.projectTitle
   elements.projectDescription.innerHTML = t.projectDescription
-  elements.projectImagesNote.innerHTML = t.projectOpenImages
+  elements.projectImagesNote.textContent = t.projectOpenImages
 }
 
 elements.button.addEventListener('click', () => {
@@ -43,24 +72,27 @@ elements.button.addEventListener('click', () => {
   render()
 })
 
+/* ---------- Modal logic ---------- */
+document.addEventListener('click', (e) => {
+  if (e.target.classList.contains('screenshot-thumb')) {
+    elements.modalImg.src = e.target.src
+    elements.modal.classList.remove('hidden')
+  }
+
+  if (e.target === elements.modal || e.target === elements.modalClose) {
+    closeModal()
+  }
+})
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') closeModal()
+})
+
+function closeModal() {
+  elements.modal.classList.add('hidden')
+  elements.modalImg.src = ''
+}
+
+/* ---------- Init ---------- */
 render()
-
-document.querySelector('#app').innerHTML = `
-  <div>
-    <a href="https://vite.dev" target="_blank">
-      <img src="${viteLogo}" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-      <img src="${javascriptLogo}" class="logo vanilla" alt="JavaScript logo" />
-    </a>
-    <h1>Hello Vite!</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
-    </div>
-    <p class="read-the-docs">
-      Click on the Vite logo to learn more
-    </p>
-  </div>
-`
-
-setupCounter(document.querySelector('#counter'))
+renderScreenshots()
