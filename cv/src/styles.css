@@ -166,15 +166,17 @@ footer {
 }
 
 .project-screenshots {
-    display: flex;
-    gap: 18px;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    justify-items: center;
     margin: 18px 0;
-    flex-wrap: wrap;
 }
 
 .project-screenshots img {
-    max-width: 260px;
+    width: 100%;
+    height: 140px;        /* same height for all */
+    object-fit: cover;    /* crops instead of stretching */
     border-radius: 10px;
     box-shadow: 0 2px 12px #00eaff33;
     border: 2px solid #00eaff22;
@@ -208,6 +210,9 @@ footer {
     .content {
         font-size: 1em;
         padding: 7px 6px 7px 6px;
+    }
+        .project-screenshots {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
