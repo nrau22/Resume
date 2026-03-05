@@ -17,7 +17,7 @@ Error generating stack: `+i.message+`
       <p>Raahen Porvari ja Kauppakoulu, Raahe (08/2016 – 05/2019)</p>
     `,experienceTitle:"Työkokemus",experience:`
       <h3>Mobiilisovelluskehittäjä</h3>
-      <p>Kauppakeskus Chydenia (06/2025 – 12/2025)</p>
+      <p>MyBase Finland Oy (06/2025 – 12/2025)</p>
       <p>Kauppakeskuksen mobiilisovelluksen kehitys: käyttöliittymän ja toiminnallisuuksien toteutus, tietokantaintegraatiot sekä testaus ja käyttöönoton tuki. Käytännön kokemusta sovelluskehityksestä ja tiimityöstä.</p>
 
       <h3>IT-tukiharjoittelija</h3>
@@ -59,7 +59,7 @@ Error generating stack: `+i.message+`
       <p>Raahen Porvari ja Kauppakoulu, Raahe (08/2016 – 05/2019)</p>
     `,experienceTitle:"Work Experience",experience:`
       <h3>Mobile Application Developer</h3>
-      <p>Kauppakeskus Chydenia (06/2025 – 12/2025)</p>
+      <p>MyBase Finland Oy (06/2025 – 12/2025)</p>
       <p>Development of a shopping center mobile application: UI and functionality implementation, database integrations, as well as testing and deployment support. Hands-on experience in app development and teamwork.</p>
 
       <h3>IT Support Intern</h3>
